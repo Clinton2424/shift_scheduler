@@ -73,10 +73,61 @@ Objective:
 \## Run Locally
 
 ```bash
+You can access the deployed Streamlit application here:
+
+https://shiftscheduler-gfgqcxdmp3w6hliqgdf7ae.streamlit.app/
+
+The app allows users to generate an optimal weekly employee shift schedule based on staffing requirements, employee availability, and workload constraints.
 
 pip install -r requirements.txt
 
 streamlit run app.py
+Analytics & Optimization Approach
 
+This project applies prescriptive analytics using mathematical optimization.
+
+Decision Variables
+
+𝑥
+𝑒
+,
+𝑠
+=
+1
+x
+e,s
+	​
+
+=1 if employee e is assigned to shift s, otherwise 0.
+
+Constraints
+
+Coverage constraints: each shift must meet required staffing levels.
+
+Availability constraints: employees can only be assigned to shifts they are available for.
+
+Workload constraints: each employee has a maximum number of shifts.
+
+Fairness constraint: limits the maximum number of shifts assigned to any single employee.
+
+Objective Function
+
+The objective minimizes:
+
+total understaffing across all shifts, and
+
+imbalance in employee workload.
+
+This is solved using OR-Tools CP-SAT, ensuring an optimal and interpretable schedule.
+
+Technologies Used
+
+Python
+
+Streamlit
+
+OR-Tools (CP-SAT solver)
+
+Pandas
 
 
