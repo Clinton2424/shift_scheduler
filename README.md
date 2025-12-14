@@ -73,6 +73,7 @@ Objective:
 \## Run Locally
 
 ```bash
+Demo video link= https://www.loom.com/share/ce75ccbaad564f36b08e1d68fc9b4463
 You can access the deployed Streamlit application here:
 
 https://shiftscheduler-gfgqcxdmp3w6hliqgdf7ae.streamlit.app/
